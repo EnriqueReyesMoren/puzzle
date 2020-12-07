@@ -1,0 +1,128 @@
+@import './global';
+@import './variables';
+@import './typefaces';
+@import './mixins';
+@import './media_queries';
+.titleSlider {
+    margin: 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    .subtitleSlider>h5 {
+        @include mainTypography($subTypography, $negrita);
+        color: $grisColor;
+        font-size: .8rem;
+        padding-bottom: 24px;
+    }
+    .titleLine>h2 {
+        @include mainTypography($mainTypography, $regular);
+        color: $textBlack;
+        line-height: 1.5;
+        padding-bottom: 40px;
+        span {
+            @include mainTypography($mainTypography, $negrita);
+        }
+    }
+    form {
+        @include directionLayout();
+        position: absolute;
+        input {
+            width: 30vw;
+            flex-grow: 2;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 20px;
+            &::placeholder {
+                font-size: 10px;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        a {
+            position: absolute;
+            top: 6px;
+            right: 10px;
+            background-color: $orangeHov;
+            border-radius: 100%;
+            @include directionLayout();
+        }
+        .search {
+            width: 12px;
+            padding: 12px;
+            &:hover {
+                background-color: $purpleColorTwo;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .titleSlider {
+        margin: 0;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+        .lottieSlide {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            left: 40vw;
+        }
+        .subtitleSlider>h5 {
+            @include mainTypography($subTypography, $negrita);
+            color: $grisColor;
+            font-size: .8rem;
+            padding-bottom: 24px;
+        }
+        .titleLine>h2 {
+            @include mainTypography($mainTypography, $regular);
+            color: $textBlack;
+            line-height: 1.5;
+            padding-bottom: 40px;
+            span {
+                @include mainTypography($mainTypography, $negrita);
+            }
+        }
+        form {
+            @include directionLayout();
+            position: absolute;
+            input {
+                width: 30vw;
+                flex-grow: 2;
+                border: none;
+                padding: 16px 32px;
+                border-radius: 20px;
+                &::placeholder {
+                    font-size: 10px;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+            a {
+                position: absolute;
+                top: 6px;
+                right: 10px;
+                background-color: $orangeHov;
+                border-radius: 100%;
+                @include directionLayout();
+            }
+            .search {
+                width: 12px;
+                padding: 12px;
+                &:hover {
+                    background-color: $purpleColorTwo;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+}

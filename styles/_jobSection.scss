@@ -1,0 +1,222 @@
+@import './global';
+@import './variables';
+@import './typefaces';
+@import './mixins';
+@import './media_queries';
+@import './navbar';
+@import './loader';
+.jobSection {
+    margin: 0;
+    @include directionHorizontal();
+    h5 {
+        @include mainTypography($subTypography, $negrita);
+        color: $grisColor;
+        font-size: 10px;
+        padding-bottom: 16px;
+    }
+    .cardsLayout {
+        @include directionLayout();
+        padding: 4vh 4vh 5vw 5vw;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+    }
+    .card {
+        margin-top: 2vh;
+        background-color: $white;
+        -webkit-box-shadow: 7px 16px 39px 5px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: 7px 16px 39px 5px rgba(0, 0, 0, 0.38);
+        box-shadow: 7px 16px 39px 5px rgba(0, 0, 0, 0.38);
+        width: 300px;
+        height: 400px;
+        border-radius: 4px;
+        /* display: inline; */
+        @include directionHorizontal();
+        margin-right: 3vw;
+        .cardText {
+            padding: 0 16px;
+            .brandImages {
+                @include directionHorizontal();
+                justify-content: center;
+                align-items: center;
+                height: 120px;
+                img {
+                    width: 64px;
+                    padding: 32px;
+                    object-fit: cover;
+                    position: relative;
+                }
+                .hoverImg {
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    opacity: 0%;
+                }
+            }
+            hr {
+                border: none;
+                border-bottom: 1px $grisColor solid;
+            }
+            .cardText {
+                @include directionHorizontal();
+                justify-content: flex-start;
+                align-items: flex-start;
+                h5 {
+                    @include mainTypography($mainTypography, $negrita);
+                    color: $textBlack;
+                    font-size: 8px;
+                    padding: 24px 0;
+                }
+                p {
+                    @include mainTypography($mainTypography, $negrita);
+                    color: $grisColor;
+                    font-size: 8px;
+                    padding-bottom: 12px;
+                }
+                .cardLocal {
+                    @include directionLayout();
+                    padding-bottom: 24px;
+                    .location {
+                        width: 12px;
+                    }
+                    h6 {
+                        @include mainTypography($mainTypography, $regular);
+                        color: $grisColor;
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+        .cardPrice {
+            background-color: $grisBackground;
+            padding: 32px 16px;
+            @include directionLayout();
+            justify-content: space-between;
+            height: 40px;
+            .priceContainer {
+                p {
+                    @include mainTypography($mainTypography, $regular);
+                    font-size: 12px;
+                    color: $purpleColorTwo;
+                    padding-bottom: 10px;
+                }
+                h6 {
+                    @include mainTypography($mainTypography, $regular);
+                    color: $purpleColor;
+                    font-size: 8px;
+                }
+            }
+            img {
+                width: 12px;
+                padding: 12px;
+                border: 1px $grisColor solid;
+                border-radius: 100%;
+                &:hover {
+                    background-color: $purpleColorTwo;
+                    width: 14px;
+                    padding: 14px;
+                    border: none;
+                }
+            }
+        }
+        &:hover {
+            background-color: $hov;
+            -webkit-box-shadow: 7px 16px 81px 16px rgba(0, 0, 0, 0.38);
+            -moz-box-shadow: 7px 16px 81px 16px rgba(0, 0, 0, 0.38);
+            box-shadow: 7px 16px 81px 16px rgba(0, 0, 0, 0.38);
+            width: 300px;
+            height: 400px;
+            border-radius: 4px;
+            display: inline;
+            @include directionHorizontal();
+            margin-right: 64px;
+            .cardText {
+                padding: 0 16px;
+                .brandImages {
+                    @include directionHorizontal();
+                    justify-content: center;
+                    align-items: center;
+                    height: 120px;
+                    img {
+                        opacity: 0;
+                        width: 96px;
+                        padding: 32px;
+                        object-fit: cover;
+                        position: relative;
+                    }
+                    .hoverImg {
+                        position: absolute;
+                        width: 64px;
+                        height: auto;
+                        opacity: 100%;
+                    }
+                }
+                hr {
+                    border: none;
+                    border-bottom: 1px $grisColor solid;
+                }
+                .cardText {
+                    @include directionHorizontal();
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    h5 {
+                        @include mainTypography($mainTypography, $negrita);
+                        color: $textHover;
+                        font-size: 10px;
+                        padding: 24px 0;
+                    }
+                    p {
+                        @include mainTypography($mainTypography, $negrita);
+                        color: $textHover;
+                        font-size: 10px;
+                        padding-bottom: 12px;
+                    }
+                    .cardLocal {
+                        @include directionLayout();
+                        padding-bottom: 24px;
+                        .location {
+                            width: 12px;
+                        }
+                        h6 {
+                            @include mainTypography($mainTypography, $regular);
+                            color: $textHover;
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+            .cardPrice {
+                background-color: $grisBackground;
+                padding: 32px 16px;
+                @include directionLayout();
+                justify-content: space-between;
+                height: 40px;
+                .priceContainer {
+                    p {
+                        @include mainTypography($mainTypography, $regular);
+                        font-size: 16px;
+                        color: $purpleColorTwo;
+                        padding-bottom: 10px;
+                    }
+                    h6 {
+                        @include mainTypography($mainTypography, $regular);
+                        color: $purpleColor;
+                        font-size: 16px;
+                    }
+                }
+                img {
+                    width: 12px;
+                    padding: 12px;
+                    border: 1px $grisColor solid;
+                    border-radius: 100%;
+                    &:hover {
+                        background-color: $purpleColorTwo;
+                        width: 14px;
+                        padding: 14px;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
