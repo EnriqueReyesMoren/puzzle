@@ -1,4 +1,4 @@
-# hEY BLACKMAGIC
+# HEY BLACKMAGIC
 
 I was able to carry out the technical challenge thinking about redesigning the layout.
 I had a happy time developing it although I would have loved to have a little more time. Surely even better things can be accomplished.
