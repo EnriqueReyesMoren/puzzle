@@ -2,9 +2,10 @@
 @import './variables';
 @import './typefaces';
 @import './mixins';
+@import './media_queries';
+@import './navbar';
+@import './loader';
 body {
-    /*  margin: 80px; */
-    /* padding: 80px; */
     height: 100vh;
     background-color: royalblue;
     background-image: url("background.png");
@@ -48,44 +49,6 @@ body {
     background-size: cover;
 }
 
-nav {
-    @include mainTypography($mainTypography,
-    $negrita);
-    color: $white;
-    font-size: 10px;
-    @include directionLayout();
-    justify-content: space-between;
-    a {
-        color: $white;
-    }
-    .navLayout {
-        @include directionLayout();
-        justify-content: space-between;
-        a:hover {
-            color: $orangeHov;
-        }
-    }
-    .logoLayout .logo {
-        width: 24px;
-    }
-    .menuSpace ul {
-        @include directionLayout();
-        margin-right: 80px;
-        li {
-            margin-right: 32px;
-        }
-    }
-    .buttonCorner ul {
-        @include directionLayout();
-         :nth-child(2) {
-            padding: 24px 32px;
-            margin-left: 32px;
-            border-radius: 100px;
-            background-color: #5e44d5;
-        }
-    }
-}
-
 .titleSlider {
     margin: 0;
     width: 90%;
@@ -114,7 +77,7 @@ nav {
         @include directionLayout();
         position: absolute;
         input {
-            width: 480px;
+            width: 30vw;
             flex-grow: 2;
             border: none;
             padding: 16px 32px;

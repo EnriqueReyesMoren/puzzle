@@ -1,0 +1,41 @@
+@import './global';
+@import './variables';
+@import './typefaces';
+@import './mixins';
+@import './media_queries';
+nav {
+    @include mainTypography($mainTypography, $negrita);
+    color: $white;
+    font-size: 10px;
+    @include directionLayout();
+    justify-content: space-between;
+    a {
+        color: $white;
+    }
+    .navLayout {
+        @include directionLayout();
+        justify-content: space-between;
+        a:hover {
+            color: $orangeHov;
+        }
+    }
+    .logoLayout .logo {
+        width: 24px;
+    }
+    .menuSpace ul {
+        @include directionLayout();
+        margin-right: 80px;
+        li {
+            margin-right: 32px;
+        }
+    }
+    .buttonCorner ul {
+        @include directionLayout();
+         :nth-child(2) {
+            padding: 24px 32px;
+            margin-left: 32px;
+            border-radius: 100px;
+            background-color: #5e44d5;
+        }
+    }
+}

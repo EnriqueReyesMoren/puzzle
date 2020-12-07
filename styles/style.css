@@ -1,5 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:ital,wght@1,300&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -23,69 +29,31 @@ ul {
   list-style: none;
 }
 
-body {
-  /*  margin: 80px; */
-  /* padding: 80px; */
-  height: 100vh;
-  background-color: royalblue;
-  background-image: url("background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-animation: animateBg 10s linear infinite;
-          animation: animateBg 10s linear infinite;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#051937), color-stop(#00285f), color-stop(#003688), color-stop(#0d44b3), color-stop(#3450de), color-stop(#64b3d9), color-stop(#208ea2), color-stop(#498ada), color-stop(#5b73df), to(#897ed3));
-  background-image: linear-gradient(0deg, #051937, #00285f, #003688, #0d44b3, #3450de, #64b3d9, #208ea2, #498ada, #5b73df, #897ed3);
-  background-size: 100% 1100%;
-  font-family: Spartan;
-  font-weight: 400;
-}
-
-@-webkit-keyframes animateBg {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 0% 100%;
-  }
-}
-
-@keyframes animateBg {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 0% 100%;
-  }
-}
-
-.backgroundMain {
-  -webkit-animation: animateBg 10s linear infinite;
-          animation: animateBg 10s linear infinite;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#64b3d9), color-stop(#208ea2), color-stop(#498ada), color-stop(#5b73df), to(#897ed3));
-  background-image: linear-gradient(0deg, #64b3d9, #208ea2, #498ada, #5b73df, #897ed3);
-  background-image: url("background.png");
-  background-size: 100% 1100%;
-}
-
-@keyframes animateBg {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 0% 100%;
-  }
-}
-
-.overback {
-  background-image: url("background.png");
+* {
+  padding: 0;
   margin: 0;
-  padding: 10px 80px;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 nav {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 700;
   color: #ffffff;
   font-size: 10px;
@@ -178,6 +146,185 @@ nav .buttonCorner ul :nth-child(2) {
   background-color: #5e44d5;
 }
 
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #F1F2F7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  -webkit-animation: loader 2s infinite ease;
+          animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  -webkit-animation: loader-inner 2s infinite ease-in;
+          animation: loader-inner 2s infinite ease-in;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+body {
+  height: 100vh;
+  background-color: royalblue;
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation: animateBg 10s linear infinite;
+          animation: animateBg 10s linear infinite;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#051937), color-stop(#00285f), color-stop(#003688), color-stop(#0d44b3), color-stop(#3450de), color-stop(#64b3d9), color-stop(#208ea2), color-stop(#498ada), color-stop(#5b73df), to(#897ed3));
+  background-image: linear-gradient(0deg, #051937, #00285f, #003688, #0d44b3, #3450de, #64b3d9, #208ea2, #498ada, #5b73df, #897ed3);
+  background-size: 100% 1100%;
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+@-webkit-keyframes animateBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.backgroundMain {
+  -webkit-animation: animateBg 10s linear infinite;
+          animation: animateBg 10s linear infinite;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#64b3d9), color-stop(#208ea2), color-stop(#498ada), color-stop(#5b73df), to(#897ed3));
+  background-image: linear-gradient(0deg, #64b3d9, #208ea2, #498ada, #5b73df, #897ed3);
+  background-image: url("background.png");
+  background-size: 100% 1100%;
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.overback {
+  background-image: url("background.png");
+  margin: 0;
+  padding: 10px 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .titleSlider {
   margin: 0;
   width: 90%;
@@ -194,7 +341,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .titleSlider .subtitleSlider > h5 {
-  font-family: Cousine;
+  font-family: Montserrat;
   font-weight: 700;
   color: #97959a;
   font-size: 10px;
@@ -202,7 +349,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .titleSlider .titleLine > h2 {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 400;
   color: #343036;
   line-height: 1.5;
@@ -210,7 +357,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .titleSlider .titleLine > h2 span {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 700;
 }
 
@@ -231,7 +378,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .titleSlider form input {
-  width: 480px;
+  width: 30vw;
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
@@ -302,7 +449,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .jobSection h5 {
-  font-family: Cousine;
+  font-family: Montserrat;
   font-weight: 700;
   color: #97959a;
   font-size: 10px;
@@ -402,7 +549,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .jobSection .card .cardText .cardText h5 {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 700;
   color: #343036;
   font-size: 8px;
@@ -410,7 +557,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .jobSection .card .cardText .cardText p {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 700;
   color: #97959a;
   font-size: 8px;
@@ -438,7 +585,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .jobSection .card .cardText .cardText .cardLocal h6 {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 400;
   color: #97959a;
   font-size: 8px;
@@ -466,7 +613,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .jobSection .card .cardPrice .priceContainer p {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 400;
   font-size: 12px;
   color: #5c22d1;
@@ -474,7 +621,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .jobSection .card .cardPrice .priceContainer h6 {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 400;
   color: #beb9d3;
   font-size: 8px;
@@ -571,7 +718,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .jobSection .card:hover .cardText .cardText h5 {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 700;
   color: white;
   font-size: 10px;
@@ -579,7 +726,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .jobSection .card:hover .cardText .cardText p {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 700;
   color: white;
   font-size: 10px;
@@ -607,7 +754,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .jobSection .card:hover .cardText .cardText .cardLocal h6 {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 400;
   color: white;
   font-size: 10px;
@@ -635,7 +782,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .jobSection .card:hover .cardPrice .priceContainer p {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 400;
   font-size: 16px;
   color: #5c22d1;
@@ -643,7 +790,7 @@ nav .buttonCorner ul :nth-child(2) {
 }
 
 .jobSection .card:hover .cardPrice .priceContainer h6 {
-  font-family: Spartan;
+  font-family: Poppins;
   font-weight: 400;
   color: #beb9d3;
   font-size: 16px;
