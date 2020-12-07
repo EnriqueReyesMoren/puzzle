@@ -1,0 +1,17 @@
+// MIXINS
+@mixin mainTypography($family, $weight) {
+    font-family: $family;
+    font-weight: $weight;
+}
+
+@mixin directionLayout() {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin directionHorizontal() {
+    display: flex;
+    flex-direction: column;
+}

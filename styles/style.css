@@ -1,0 +1,665 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  /*  margin: 80px; */
+  /* padding: 80px; */
+  height: 100vh;
+  background-color: royalblue;
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation: animateBg 10s linear infinite;
+          animation: animateBg 10s linear infinite;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#051937), color-stop(#00285f), color-stop(#003688), color-stop(#0d44b3), color-stop(#3450de), color-stop(#64b3d9), color-stop(#208ea2), color-stop(#498ada), color-stop(#5b73df), to(#897ed3));
+  background-image: linear-gradient(0deg, #051937, #00285f, #003688, #0d44b3, #3450de, #64b3d9, #208ea2, #498ada, #5b73df, #897ed3);
+  background-size: 100% 1100%;
+  font-family: Spartan;
+  font-weight: 400;
+}
+
+@-webkit-keyframes animateBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.backgroundMain {
+  -webkit-animation: animateBg 10s linear infinite;
+          animation: animateBg 10s linear infinite;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#64b3d9), color-stop(#208ea2), color-stop(#498ada), color-stop(#5b73df), to(#897ed3));
+  background-image: linear-gradient(0deg, #64b3d9, #208ea2, #498ada, #5b73df, #897ed3);
+  background-image: url("background.png");
+  background-size: 100% 1100%;
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.overback {
+  background-image: url("background.png");
+  margin: 0;
+  padding: 10px 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  font-family: Spartan;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav a {
+  color: #ffffff;
+}
+
+nav .navLayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .navLayout a:hover {
+  color: #ff8d58;
+}
+
+nav .logoLayout .logo {
+  width: 24px;
+}
+
+nav .menuSpace ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 80px;
+}
+
+nav .menuSpace ul li {
+  margin-right: 32px;
+}
+
+nav .buttonCorner ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .buttonCorner ul :nth-child(2) {
+  padding: 24px 32px;
+  margin-left: 32px;
+  border-radius: 100px;
+  background-color: #5e44d5;
+}
+
+.titleSlider {
+  margin: 0;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.titleSlider .subtitleSlider > h5 {
+  font-family: Cousine;
+  font-weight: 700;
+  color: #97959a;
+  font-size: 10px;
+  padding-bottom: 24px;
+}
+
+.titleSlider .titleLine > h2 {
+  font-family: Spartan;
+  font-weight: 400;
+  color: #343036;
+  line-height: 1.5;
+  padding-bottom: 40px;
+}
+
+.titleSlider .titleLine > h2 span {
+  font-family: Spartan;
+  font-weight: 700;
+}
+
+.titleSlider form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+}
+
+.titleSlider form input {
+  width: 480px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 20px;
+}
+
+.titleSlider form input::-webkit-input-placeholder {
+  font-size: 10px;
+}
+
+.titleSlider form input:-ms-input-placeholder {
+  font-size: 10px;
+}
+
+.titleSlider form input::-ms-input-placeholder {
+  font-size: 10px;
+}
+
+.titleSlider form input::placeholder {
+  font-size: 10px;
+}
+
+.titleSlider form input:focus {
+  outline: none;
+}
+
+.titleSlider form a {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background-color: #ff8d58;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.titleSlider form .search {
+  width: 12px;
+  padding: 12px;
+}
+
+.titleSlider form .search:hover {
+  background-color: #5c22d1;
+  border-radius: 100%;
+}
+
+.jobSection {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.jobSection h5 {
+  font-family: Cousine;
+  font-weight: 700;
+  color: #97959a;
+  font-size: 10px;
+  padding-bottom: 16px;
+}
+
+.jobSection .cardsLayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 4vh 5vw 5vw;
+  justify-content: space-around;
+}
+
+.jobSection .card {
+  background-color: #ffffff;
+  -webkit-box-shadow: 7px 16px 39px 5px rgba(0, 0, 0, 0.38);
+  box-shadow: 7px 16px 39px 5px rgba(0, 0, 0, 0.38);
+  width: 300px;
+  height: 400px;
+  border-radius: 4px;
+  display: inline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 64px;
+}
+
+.jobSection .card .cardText {
+  padding: 0 16px;
+}
+
+.jobSection .card .cardText .brandImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
+}
+
+.jobSection .card .cardText .brandImages img {
+  width: 64px;
+  padding: 32px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.jobSection .card .cardText .brandImages .hoverImg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0%;
+}
+
+.jobSection .card .cardText hr {
+  border: none;
+  border-bottom: 1px #97959a solid;
+}
+
+.jobSection .card .cardText .cardText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.jobSection .card .cardText .cardText h5 {
+  font-family: Spartan;
+  font-weight: 700;
+  color: #343036;
+  font-size: 8px;
+  padding: 24px 0;
+}
+
+.jobSection .card .cardText .cardText p {
+  font-family: Spartan;
+  font-weight: 700;
+  color: #97959a;
+  font-size: 8px;
+  padding-bottom: 12px;
+}
+
+.jobSection .card .cardText .cardText .cardLocal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 24px;
+}
+
+.jobSection .card .cardText .cardText .cardLocal .location {
+  width: 12px;
+}
+
+.jobSection .card .cardText .cardText .cardLocal h6 {
+  font-family: Spartan;
+  font-weight: 400;
+  color: #97959a;
+  font-size: 8px;
+}
+
+.jobSection .card .cardPrice {
+  background-color: #fafafe;
+  padding: 32px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40px;
+}
+
+.jobSection .card .cardPrice .priceContainer p {
+  font-family: Spartan;
+  font-weight: 400;
+  font-size: 12px;
+  color: #5c22d1;
+  padding-bottom: 10px;
+}
+
+.jobSection .card .cardPrice .priceContainer h6 {
+  font-family: Spartan;
+  font-weight: 400;
+  color: #beb9d3;
+  font-size: 8px;
+}
+
+.jobSection .card .cardPrice img {
+  width: 12px;
+  padding: 12px;
+  border: 1px #97959a solid;
+  border-radius: 100%;
+}
+
+.jobSection .card .cardPrice img:hover {
+  background-color: #5c22d1;
+  width: 14px;
+  padding: 14px;
+  border: none;
+}
+
+.jobSection .card:hover {
+  background-color: #592AD0;
+  -webkit-box-shadow: 7px 16px 81px 16px rgba(0, 0, 0, 0.38);
+  box-shadow: 7px 16px 81px 16px rgba(0, 0, 0, 0.38);
+  width: 300px;
+  height: 400px;
+  border-radius: 4px;
+  display: inline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 64px;
+}
+
+.jobSection .card:hover .cardText {
+  padding: 0 16px;
+}
+
+.jobSection .card:hover .cardText .brandImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
+}
+
+.jobSection .card:hover .cardText .brandImages img {
+  opacity: 0;
+  width: 96px;
+  padding: 32px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.jobSection .card:hover .cardText .brandImages .hoverImg {
+  position: absolute;
+  width: 64px;
+  height: auto;
+  opacity: 100%;
+}
+
+.jobSection .card:hover .cardText hr {
+  border: none;
+  border-bottom: 1px #97959a solid;
+}
+
+.jobSection .card:hover .cardText .cardText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.jobSection .card:hover .cardText .cardText h5 {
+  font-family: Spartan;
+  font-weight: 700;
+  color: white;
+  font-size: 10px;
+  padding: 24px 0;
+}
+
+.jobSection .card:hover .cardText .cardText p {
+  font-family: Spartan;
+  font-weight: 700;
+  color: white;
+  font-size: 10px;
+  padding-bottom: 12px;
+}
+
+.jobSection .card:hover .cardText .cardText .cardLocal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 24px;
+}
+
+.jobSection .card:hover .cardText .cardText .cardLocal .location {
+  width: 12px;
+}
+
+.jobSection .card:hover .cardText .cardText .cardLocal h6 {
+  font-family: Spartan;
+  font-weight: 400;
+  color: white;
+  font-size: 10px;
+}
+
+.jobSection .card:hover .cardPrice {
+  background-color: #fafafe;
+  padding: 32px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40px;
+}
+
+.jobSection .card:hover .cardPrice .priceContainer p {
+  font-family: Spartan;
+  font-weight: 400;
+  font-size: 16px;
+  color: #5c22d1;
+  padding-bottom: 10px;
+}
+
+.jobSection .card:hover .cardPrice .priceContainer h6 {
+  font-family: Spartan;
+  font-weight: 400;
+  color: #beb9d3;
+  font-size: 16px;
+}
+
+.jobSection .card:hover .cardPrice img {
+  width: 12px;
+  padding: 12px;
+  border: 1px #97959a solid;
+  border-radius: 100%;
+}
+
+.jobSection .card:hover .cardPrice img:hover {
+  background-color: #5c22d1;
+  width: 14px;
+  padding: 14px;
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */

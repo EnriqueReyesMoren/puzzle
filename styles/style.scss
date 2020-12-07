@@ -1,0 +1,370 @@
+@import './global';
+@import './variables';
+@import './typefaces';
+@import './mixins';
+body {
+    /*  margin: 80px; */
+    /* padding: 80px; */
+    height: 100vh;
+    background-color: royalblue;
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: animateBg 10s linear infinite;
+    background-image: linear-gradient(0deg, #051937, #00285f, #003688, #0d44b3, #3450de, #64b3d9, #208ea2, #498ada, #5b73df, #897ed3);
+    background-size: 100% 1100%;
+    @keyframes animateBg {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 0% 100%;
+        }
+    }
+    @include mainTypography($mainTypography,
+    $regular)
+}
+
+.backgroundMain {
+    animation: animateBg 10s linear infinite;
+    background-image: linear-gradient(0deg, #64b3d9, #208ea2, #498ada, #5b73df, #897ed3);
+    background-image: url("background.png");
+    background-size: 100% 1100%;
+    @keyframes animateBg {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 0% 100%;
+        }
+    }
+}
+
+.overback {
+    background-image: url("background.png");
+    margin: 0;
+    padding: 10px 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    @include mainTypography($mainTypography,
+    $negrita);
+    color: $white;
+    font-size: 10px;
+    @include directionLayout();
+    justify-content: space-between;
+    a {
+        color: $white;
+    }
+    .navLayout {
+        @include directionLayout();
+        justify-content: space-between;
+        a:hover {
+            color: $orangeHov;
+        }
+    }
+    .logoLayout .logo {
+        width: 24px;
+    }
+    .menuSpace ul {
+        @include directionLayout();
+        margin-right: 80px;
+        li {
+            margin-right: 32px;
+        }
+    }
+    .buttonCorner ul {
+        @include directionLayout();
+         :nth-child(2) {
+            padding: 24px 32px;
+            margin-left: 32px;
+            border-radius: 100px;
+            background-color: #5e44d5;
+        }
+    }
+}
+
+.titleSlider {
+    margin: 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    .subtitleSlider>h5 {
+        @include mainTypography($subTypography,
+        $negrita);
+        color: $grisColor;
+        font-size: 10px;
+        padding-bottom: 24px;
+    }
+    .titleLine>h2 {
+        @include mainTypography($mainTypography,
+        $regular);
+        color: $textBlack;
+        line-height: 1.5;
+        padding-bottom: 40px;
+        span {
+            @include mainTypography($mainTypography,
+            $negrita);
+        }
+    }
+    form {
+        @include directionLayout();
+        position: absolute;
+        input {
+            width: 480px;
+            flex-grow: 2;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 20px;
+            &::placeholder {
+                font-size: 10px;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        a {
+            position: absolute;
+            top: 6px;
+            right: 10px;
+            background-color: $orangeHov;
+            border-radius: 100%;
+            @include directionLayout();
+        }
+        .search {
+            width: 12px;
+            padding: 12px;
+            &:hover {
+                background-color: $purpleColorTwo;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+.jobSection {
+    margin: 0;
+    @include directionHorizontal();
+    h5 {
+        @include mainTypography($subTypography,
+        $negrita);
+        color: $grisColor;
+        font-size: 10px;
+        padding-bottom: 16px;
+    }
+    .cardsLayout {
+        @include directionLayout();
+        padding: 0 4vh 5vw 5vw;
+        justify-content: space-around;
+    }
+    .card {
+        background-color: $white;
+        -webkit-box-shadow: 7px 16px 39px 5px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: 7px 16px 39px 5px rgba(0, 0, 0, 0.38);
+        box-shadow: 7px 16px 39px 5px rgba(0, 0, 0, 0.38);
+        width: 300px;
+        height: 400px;
+        border-radius: 4px;
+        display: inline;
+        @include directionHorizontal();
+        margin-right: 64px;
+        .cardText {
+            padding: 0 16px;
+            .brandImages {
+                @include directionHorizontal();
+                justify-content: center;
+                align-items: center;
+                height: 120px;
+                img {
+                    width: 64px;
+                    padding: 32px;
+                    object-fit: cover;
+                    position: relative;
+                }
+                .hoverImg {
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    opacity: 0%;
+                }
+            }
+            hr {
+                border: none;
+                border-bottom: 1px $grisColor solid;
+            }
+            .cardText {
+                @include directionHorizontal();
+                justify-content: flex-start;
+                align-items: flex-start;
+                h5 {
+                    @include mainTypography($mainTypography,
+                    $negrita);
+                    color: $textBlack;
+                    font-size: 8px;
+                    padding: 24px 0;
+                }
+                p {
+                    @include mainTypography($mainTypography,
+                    $negrita);
+                    color: $grisColor;
+                    font-size: 8px;
+                    padding-bottom: 12px;
+                }
+                .cardLocal {
+                    @include directionLayout();
+                    padding-bottom: 24px;
+                    .location {
+                        width: 12px;
+                    }
+                    h6 {
+                        @include mainTypography($mainTypography,
+                        $regular);
+                        color: $grisColor;
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+        .cardPrice {
+            background-color: $grisBackground;
+            padding: 32px 16px;
+            @include directionLayout();
+            justify-content: space-between;
+            height: 40px;
+            .priceContainer {
+                p {
+                    @include mainTypography($mainTypography,
+                    $regular);
+                    font-size: 12px;
+                    color: $purpleColorTwo;
+                    padding-bottom: 10px;
+                }
+                h6 {
+                    @include mainTypography($mainTypography,
+                    $regular);
+                    color: $purpleColor;
+                    font-size: 8px;
+                }
+            }
+            img {
+                width: 12px;
+                padding: 12px;
+                border: 1px $grisColor solid;
+                border-radius: 100%;
+                &:hover {
+                    background-color: $purpleColorTwo;
+                    width: 14px;
+                    padding: 14px;
+                    border: none;
+                }
+            }
+        }
+        &:hover {
+            background-color: $hov;
+            -webkit-box-shadow: 7px 16px 81px 16px rgba(0, 0, 0, 0.38);
+            -moz-box-shadow: 7px 16px 81px 16px rgba(0, 0, 0, 0.38);
+            box-shadow: 7px 16px 81px 16px rgba(0, 0, 0, 0.38);
+            width: 300px;
+            height: 400px;
+            border-radius: 4px;
+            display: inline;
+            @include directionHorizontal();
+            margin-right: 64px;
+            .cardText {
+                padding: 0 16px;
+                .brandImages {
+                    @include directionHorizontal();
+                    justify-content: center;
+                    align-items: center;
+                    height: 120px;
+                    img {
+                        opacity: 0;
+                        width: 96px;
+                        padding: 32px;
+                        object-fit: cover;
+                        position: relative;
+                    }
+                    .hoverImg {
+                        position: absolute;
+                        width: 64px;
+                        height: auto;
+                        opacity: 100%;
+                    }
+                }
+                hr {
+                    border: none;
+                    border-bottom: 1px $grisColor solid;
+                }
+                .cardText {
+                    @include directionHorizontal();
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    h5 {
+                        @include mainTypography($mainTypography,
+                        $negrita);
+                        color: $textHover;
+                        font-size: 10px;
+                        padding: 24px 0;
+                    }
+                    p {
+                        @include mainTypography($mainTypography,
+                        $negrita);
+                        color: $textHover;
+                        font-size: 10px;
+                        padding-bottom: 12px;
+                    }
+                    .cardLocal {
+                        @include directionLayout();
+                        padding-bottom: 24px;
+                        .location {
+                            width: 12px;
+                        }
+                        h6 {
+                            @include mainTypography($mainTypography,
+                            $regular);
+                            color: $textHover;
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+            .cardPrice {
+                background-color: $grisBackground;
+                padding: 32px 16px;
+                @include directionLayout();
+                justify-content: space-between;
+                height: 40px;
+                .priceContainer {
+                    p {
+                        @include mainTypography($mainTypography,
+                        $regular);
+                        font-size: 16px;
+                        color: $purpleColorTwo;
+                        padding-bottom: 10px;
+                    }
+                    h6 {
+                        @include mainTypography($mainTypography,
+                        $regular);
+                        color: $purpleColor;
+                        font-size: 16px;
+                    }
+                }
+                img {
+                    width: 12px;
+                    padding: 12px;
+                    border: 1px $grisColor solid;
+                    border-radius: 100%;
+                    &:hover {
+                        background-color: $purpleColorTwo;
+                        width: 14px;
+                        padding: 14px;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
